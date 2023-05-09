@@ -27,6 +27,7 @@ a {
 
 body {
   background-color: #efefef;
+
 }
 
 .container {
@@ -164,7 +165,16 @@ main .shorts-div ul img {
 }
 .stories .story-box {
   flex-basis: 20%;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: .2s;
 }
+.stories .story-box:hover {
+  border-color: var(--blue-color);
+}
+
+
 
 @media (max-width: 410px) {
   .stories .story-box{
@@ -208,6 +218,23 @@ main .shorts-div ul img {
     word-wrap: break-word;
     border-bottom: 1px solid #eee;
     caret-color: var(--blue-color, blue);
+}
+
+.status-bar > div {
+  cursor: pointer;
+
+}
+.status-bar > div > p {
+  transition: .2s;
+}
+.status-bar > div:first-child:hover p {
+  color: #db0000;
+}
+.status-bar > div:nth-child(2):hover p {
+  color: #00ad57;
+}
+.status-bar > div:last-child:hover p {
+  color: #ffc329;
 }
 
 .post .profile-chose {
